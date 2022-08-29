@@ -3,6 +3,7 @@ const express = require('express')
 const Book = require("./models/book")
 const app = express()
 const mongoose = require("mongoose")
+const cors = require("cors")
 const db = mongoose.connection
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -40,6 +41,7 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(cors())
 
 // ======ROUTES======
 app.delete("/books/:id", (request, response)=> {
