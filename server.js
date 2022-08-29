@@ -4,7 +4,7 @@ const db = mongoose.connection
 const MONGODB_URI  = process.env.MONGODB_URI 
 
 const ENV = process.env
-<p>Hello World</p>
+
 console.log(ENV.MONGODB_URI)
 
 // Connect to Mongo
