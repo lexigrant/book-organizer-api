@@ -60,7 +60,7 @@ app.get("/books", (request, response)=> {
     })
 })
 app.get("/", (request, response)=> {
-    response.send("root route")
+    response.send("Root route")
 })
 app.put("/books/:id", (request, response)=> {
     Book.findByIdAndUpdate(request.params.id, request.body, {new:true}, (error, updateBook)=> {
