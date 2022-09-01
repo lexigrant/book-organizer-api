@@ -7,6 +7,7 @@ const bookSchema = new mongoose.Schema({
     genre: String,
     audio: Boolean,
     link: String,
+    purchase: String,
     price: Number
 })
 const Book = mongoose.model("book", bookSchema)
